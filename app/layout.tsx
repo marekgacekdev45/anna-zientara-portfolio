@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+
 import { font_heading, font_text } from '@/app/utils/fonts'
 
 import './globals.css'

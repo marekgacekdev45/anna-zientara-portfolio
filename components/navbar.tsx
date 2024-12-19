@@ -15,12 +15,10 @@ export const navLinks = [
 ]
 
 const Navbar = () => {
-	const [isOpen, setOpen] = useState(false)
+
 	const [isScrolled, setIsScrolled] = useState(false)
 
-	const handleLinkClick = () => {
-		setOpen(false)
-	}
+	
 
 	useEffect(() => {
 		const checkPosition = () => {
