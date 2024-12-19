@@ -1,0 +1,3 @@
+[build]
+  command = "npm install --legacy-peer-deps && npm run build"
+  publish = "build" # Ścieżka do katalogu z plikami statycznymi, np. "dist" lub "out" w zależności od frameworka
