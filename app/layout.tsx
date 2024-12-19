@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { font_heading, font_text } from '@/app/utils/fonts'
 
 import './globals.css'
+import { Provider } from '@/app/utils/provider'
 
 export default function RootLayout({
 	children,
@@ -9,8 +10,13 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang='pl'>
-			<body className={`${font_heading} ${font_text} antialiased`}>{children}</body>
+		<html lang='pl' suppressHydrationWarning>
+			<body className={`${font_heading} ${font_text} antialiased`}>
+				<Provider>
+
+				{children}
+				</Provider>
+				</body>
 		</html>
 	)
 }

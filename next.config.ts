@@ -13,16 +13,8 @@ const nextConfig: NextConfig = {
   async rewrites() {
 		return [
 			{
-				source: '/o-mnie',
-				destination: '/about',
-			},
-			{
 				source: '/proces-projektowy',
 				destination: '/process',
-			},
-			{
-				source: '/kontakt',
-				destination: '/contact',
 			},
 			{
 				source: '/polityka-prywatnosci',
@@ -34,18 +26,8 @@ const nextConfig: NextConfig = {
 	async redirects() {
 		return [
 			{
-				source: '/about',
-				destination: '/o-mnie',
-				permanent: true,
-			},
-			{
 				source: '/process',
 				destination: '/proces-projektowy',
-				permanent: true,
-			},
-			{
-				source: '/contact',
-				destination: '/kontakt',
 				permanent: true,
 			},
 			{
