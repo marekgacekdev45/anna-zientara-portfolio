@@ -55,7 +55,7 @@ const Process = () => {
 								</li>
 							))}
 						</ul>
-						<BaseLink href='/proces-projektowy' className='pt-12 xl:self-end'>
+						<BaseLink href='/proces-projektowy' className='pt-12 xl:self-end after:bg-white dark:after-bg-black'>
 							Dowiedz się więcej
 						</BaseLink>
 					</div>
