@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import AnnaZientara from '@/public//anna-zientara.webp'
+// import Image from 'next/image'
+// import AnnaZientara from '@/public//anna-zientara.webp'
 
 const About = () => {
 	return (
@@ -34,7 +34,7 @@ const About = () => {
 				</div>
 				{/* image */}
 				<div className=' flex justify-center items-center xl:p-8'>
-					<Image
+					{/* <Image
 						src={AnnaZientara}
 						alt='Anna Zientara'
 						className=' aspect-square  w-auto   object-cover'
@@ -42,7 +42,7 @@ const About = () => {
 						width={600}
 						height={600}
 						sizes='(max-width: 640px) 90vw, 600px'
-					/>
+					/> */}
 				</div>
 			</div>
 		</section>

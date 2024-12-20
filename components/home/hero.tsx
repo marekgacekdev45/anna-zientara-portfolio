@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import HeroImg from '@/public/hero.webp'
+// import Image from 'next/image'
+// import HeroImg from '@/public/hero.webp'
 import Link from 'next/link'
 import { CircleArrowDown } from 'lucide-react'
 import BaseLink from '../base-link'
@@ -28,7 +28,7 @@ const Hero = () => {
 				/>
 			</Link>
 
-			<Image
+			{/* <Image
 				src={HeroImg}
 				alt='Projekt w wykonaniu Anna Zientara'
 				sizes='(max-width: 640px) 640px, 100vw'
@@ -37,7 +37,7 @@ const Hero = () => {
 				fill
 				placeholder='blur'
 				className='object-cover absolute inset-0 -z-10'
-			/>
+			/> */}
 
 			<div className='absolute inset-0 bg-black opacity-40'></div>
 		</section>
