@@ -1,5 +1,5 @@
-// import Image from 'next/image'
-// import WorkImage from '@/public/assets/proces.webp'
+import Image from 'next/image'
+import WorkImage from '@/public/proces.webp'
 
 import BaseLink from '@/components/base-link'
 
@@ -24,17 +24,22 @@ const processList = [
 
 const Process = () => {
 	return (
-		<section className='section pt-12  pb-12'>
+		<section className='section py-6  sm:py-12'>
 			{/* CONTAINER */}
-			<div className='wrapper grid xl:grid-cols-2 gap-20 '>
+			<div className='wrapper grid xl:grid-cols-2 gap-12 2xl:gap-20 '>
 				{/* image */}
-				<div className='flex justify-center lg:justify-start items-center '>
-					{/* <Image
+				<div className='flex justify-center lg:justify-start items-center order-1 xl:order-none w-full md:w-[80%] xl:w-full mx-auto'>
+					<Image
 						src={WorkImage}
-						alt='Sofa z kominkiem'
-						className='aspect-square max-h-[600px] shadow-2xl shadow-gray-700 '
+						alt='wizualizacja wystroju wnętrza wykonana przez Anna Zientara'
+						
 						placeholder='blur'
-					/> */}
+						className=' aspect-square w-full object-cover'
+						
+						width={600}
+						height={600}
+						quality={70}
+					/>
 					
 				</div>
 				{/* text */}

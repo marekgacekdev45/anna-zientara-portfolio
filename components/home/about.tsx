@@ -3,9 +3,9 @@ import AnnaZientara from '@/public//anna-zientara.webp'
 
 const About = () => {
 	return (
-		<section id='o-mnie' className='py-12 sm:py-24 '>
+		<section id='o-mnie' className='pt-12 sm:pt-24 pb-6 sm:pb-12'>
 			{/* CONTAINER */}
-			<div className='wrapper grid xl:grid-cols-2 2xl:gap-20 '>
+			<div className='wrapper grid grid-cols-1 xl:grid-cols-2 gap-12 2xl:gap-20 '>
 				{/* text */}
 				<div className='flex flex-col justify-between items-start gap-12 lg:gap-0 '>
 					<div className='space-y-5 w-[95%]'>
@@ -33,7 +33,7 @@ const About = () => {
 					</div>
 				</div>
 				{/* image */}
-				<div className=' flex justify-center items-center xl:p-8'>
+				<div className=' flex justify-center items-center xl:p-8 w-full md:w-[80%] xl:w-full mx-auto'>
 					<Image
 						src={AnnaZientara}
 						alt='Anna Zientara'
