@@ -1,5 +1,5 @@
-// import Image from 'next/image'
-// import AnnaZientara from '@/public//anna-zientara.webp'
+import Image from 'next/image'
+import AnnaZientara from '@/public//anna-zientara.webp'
 
 const About = () => {
 	return (
@@ -7,7 +7,7 @@ const About = () => {
 			{/* CONTAINER */}
 			<div className='wrapper grid xl:grid-cols-2 2xl:gap-20 '>
 				{/* text */}
-				<div className='flex flex-col justify-between items-start gap-12 lg:gap-0 py-12'>
+				<div className='flex flex-col justify-between items-start gap-12 lg:gap-0 '>
 					<div className='space-y-5 w-[95%]'>
 						<div className='space-y-1'>
 							<span className='preheading'>Poznaj</span>
@@ -34,15 +34,15 @@ const About = () => {
 				</div>
 				{/* image */}
 				<div className=' flex justify-center items-center xl:p-8'>
-					{/* <Image
+					<Image
 						src={AnnaZientara}
 						alt='Anna Zientara'
-						className=' aspect-square  w-auto   object-cover'
+						className=' aspect-square w-full object-cover'
 						placeholder='blur'
-						width={600}
-						height={600}
-						sizes='(max-width: 640px) 90vw, 600px'
-					/> */}
+						width={800}
+						height={800}
+						quality={90}
+					/>
 				</div>
 			</div>
 		</section>
