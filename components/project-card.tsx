@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import BaseLink from '@/components/base-link'
+// import BaseLink from '@/components/base-link'
 import Link from 'next/link'
 import img from '@/public/work.webp'
 
