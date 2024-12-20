@@ -29,7 +29,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='pl' suppressHydrationWarning>
-			<body className={`${font_heading} ${font_text}  font-text `}>
+			<body className={`${font_heading} ${font_text}`}>
 				<Provider>{children}</Provider>
 			</body>
 		</html>

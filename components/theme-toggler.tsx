@@ -1,11 +1,14 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 
 import { Sun, Moon } from 'lucide-react'
 
-const ThemeToggler = (props: { className?: string; isScrolled?: boolean }) => {
+const ThemeToggler = (props: { className?: string; isScrolled?: boolean,mobile?:boolean }) => {
+
+	const {className, isScrolled,mobile} = props
+
 	const [mounted, setMounted] = useState(false)
 	const { theme, setTheme, resolvedTheme } = useTheme()
 
@@ -16,17 +19,18 @@ const ThemeToggler = (props: { className?: string; isScrolled?: boolean }) => {
 	if (!mounted) return null
 
 	return (
-		<button
+		<button disabled={!isScrolled && !mobile}
 			className={`p-2 border border-transparent rounded-lg hover:bg-gray-200 hover:bg-opacity-10 duration-500  ${
-				props.className
-			} ${props.isScrolled ? 'hover:border-fontDark dark:hover:border-fontLight' : 'hover:border-fontLight'}  `}
+				className
+			} ${isScrolled ? 'hover:border-fontDark dark:hover:border-fontLight' : 'hover:border-fontLight'}  `}
 			onClick={() => setTheme(theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark')}
 			aria-label='Zmień motyw'>
 			{theme === 'dark' || resolvedTheme === 'dark' ? (
 				<Sun strokeWidth={1} className='dark:text-fontLight' />
 			) : (
-				<Moon strokeWidth={1}
-					className={`text-fontDark  ${props.isScrolled ? 'text-fontDark dark:text-fontLight' : 'lg:text-fontLight'}`}
+				<Moon
+					strokeWidth={1}
+					className={`text-fontDark  ${isScrolled ? 'text-fontDark dark:text-fontLight' : 'lg:text-fontLight'}`}
 				/>
 			)}
 		</button>

@@ -24,7 +24,7 @@ const processList = [
 
 const Process = () => {
 	return (
-		<section className='section pt-12 sm:pt-24 pb-12'>
+		<section className='section pt-12  pb-12'>
 			{/* CONTAINER */}
 			<div className='wrapper grid xl:grid-cols-2 gap-20 '>
 				{/* image */}
@@ -41,7 +41,6 @@ const Process = () => {
 				<div className='flex flex-col justify-between items-center gap-12 lg:gap-0 '>
 					<div className='xl:w-[85%] flex flex-col space-y-5 '>
                         <div className='space-y-1'>
-
 						<p className='preheading'>Proces</p>
 						<h2 className='heading'>Projektowy</h2>
                         </div>

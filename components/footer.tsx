@@ -7,11 +7,13 @@ import mmLight from '@/public/icons/mm--light.svg'
 import mmDark from '@/public/icons/mm--dark.svg'
 import BaseLink from '@/components/base-link'
 
+import FooterCurrentYear from '@/components/footer-current-year'
+
 const Footer = () => {
-	const currentYear = new Date().getFullYear()
+	// const currentYear = new Date().getFullYear()
 
 	return (
-		<footer>
+		<footer className='bg-white dark:bg-black'>
 			{/* CONTAINER */}
 			<div className='max-w-screen-xl mx-auto pt-20  pb-10 space-y-6 md:space-y-12 px-12 lg:px-6 2xl:px-0'>
 				{/* TOP */}
@@ -29,12 +31,12 @@ const Footer = () => {
 							<h2 className='text-xl font-heading  uppercase '>Kontakt</h2>
 							<ul className='space-y-3'>
 								<li>
-									<BaseLink href='#' noArrow small>
+									<BaseLink href='#' noArrow small className='after:bg-white dark:after-bg-black'>
 										+48 123 456 789
 									</BaseLink>
 								</li>
 								<li>
-									<BaseLink href='#' noArrow small>
+									<BaseLink href='#' noArrow small className='after:bg-white dark:after-bg-black'>
 										test@gmail.com
 									</BaseLink>
 								</li>
@@ -61,16 +63,16 @@ const Footer = () => {
 				<hr className='border-secondary-400 dark:border-primary-400 w-full ' />
 				{/* BOTTOM */}
 				<div className='flex flex-col sm:flex-row w-full justify-center items-center sm:justify-between gap-6'>
-					<BaseLink href='/polityka-prywatnosci' noArrow small>
+					<BaseLink href='/polityka-prywatnosci' noArrow small className='after:bg-white dark:after-bg-black'>
 						Polityka Prywatności
 					</BaseLink>
 
-					<p className='text'>
-						<span className='text-sm'>© {currentYear}</span> Anna Zientara{' '}
+					<p className='text !text-sm'>
+						<FooterCurrentYear/> Anna Zientara
 					</p>
-					<Link href='#' className='hover:scale-105 duration-300'>
-						<Image src={mmLight} alt='MarketingMix' className='hidden dark:block w-36' />
-						<Image src={mmDark} alt='MarketingMix' className='block dark:hidden w-36' />
+					<Link href='https://marketingmix.pl' target="_blank" rel='noreferrer nofollow' className='hover:scale-105 duration-300' aria-label='marketingmix.pl'>
+						<Image src={mmLight} alt='MarketingMix' width={134} height={22}  className='hidden dark:block w-36' />
+						<Image src={mmDark} alt='MarketingMix' width={134} height={22} className='block dark:hidden w-36' />
 					</Link>
 				</div>
 			</div>

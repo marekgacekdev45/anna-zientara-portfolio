@@ -22,7 +22,7 @@ const NavLink = (props: {
 			<Link
 				onClick={props.onClick}
 				href={props.link.href}
-				className={`text-2xl lg:text-base uppercase  font-light
+				className={`text-2xl lg:text-base uppercase  font-light after:bg-black dark:after:bg-white
 					${props.isScrolled ? ' text-fontDark dark:text-fontLight' : ''} 
 					${props.mobile ? ' text-fontDark dark:text-fontLight' : ''} 
 					${linkHover} ${pathname === props.link.href ? actionLink : ''}`}>

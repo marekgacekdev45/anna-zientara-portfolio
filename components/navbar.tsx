@@ -38,14 +38,12 @@ const Navbar = () => {
 	return (
 		<>
 			<header
-				className={`fixed top-0 left-0 right-0 text-fontLight transition-all z-50 text-gray-300 ${
-					isScrolled
-						? 'bg-white dark:bg-black shadow-md  text-colors'
-						: ''
+				className={`fixed top-0 left-0 right-0 text-primary--light transition-all z-50  ${
+					isScrolled ? 'bg-white dark:bg-black shadow-md  text-colors' : ''
 				}`}>
 				{/* CONTAINER */}
 				<div
-					className={`max-w-[1800px] mx-auto flex justify-between items-center px-4 py-3 lg:py-5  ${
+					className={`flex justify-between items-center px-4 py-3 lg:py-5 max-w-[1800px] mx-auto ${
 						isScrolled ? 'border-none' : ' border-b border-gray-300'
 					}`}>
 					{/* links */}

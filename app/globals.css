@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-	font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer base {
 	:root {
 		--background: 0 0% 100%;
@@ -71,18 +67,16 @@ body {
 		@apply scroll-smooth scroll-p-20;
 	}
 	body {
-		@apply bg-background text-foreground antialiased  font-extralight  tracking-wide bg-[#f0f0f0] dark:bg-[#191919] text-gray-900 dark:text-gray-300;
+		@apply bg-background text-foreground antialiased  bg-[#f0f0f0] dark:bg-[#191919] text-gray-900 dark:text-gray-300 font-text  font-extralight  tracking-wide;
 	}
-
-	/* main {
-		@apply 
-	} */
 }
 
 @layer utilities {
-	/* .navbar-backgorund {
-		@apply;
-	} */
+	
+	.text-primary--light{
+		@apply text-gray-300
+	}
+
 	.text-colors {
 		@apply text-gray-900  dark:text-gray-300;
 	}

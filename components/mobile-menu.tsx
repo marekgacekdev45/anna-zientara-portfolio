@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Facebook, Instagram, Menu } from 'lucide-react'
-// import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 
 import { navLinks } from '@/components/navbar'
@@ -55,7 +54,7 @@ export default function MobileMenu() {
 
 <div className='absolute left-1 top-1.5'>
 
-                <ThemeToggler/>
+                <ThemeToggler mobile/>
 </div>
 			</SheetContent>
 		</Sheet>

@@ -19,18 +19,7 @@ export default {
 			},
 
 			colors: {
-				primary: {
-					400: '#f3f4f6',
-					600: '#d1d5db',
-					800: '#9ca3af',
-				},
-				secondary: {
-					100: '#3f3f46',
-					200: '#27272a',
-					300: '#18181b',
-					400: '#09090b',
-				},
-
+			
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				card: {
@@ -41,14 +30,7 @@ export default {
 					DEFAULT: 'hsl(var(--popover))',
 					foreground: 'hsl(var(--popover-foreground))',
 				},
-				// primary: {
-				// 	DEFAULT: 'hsl(var(--primary))',
-				// 	foreground: 'hsl(var(--primary-foreground))',
-				// },
-				// secondary: {
-				// 	DEFAULT: 'hsl(var(--secondary))',
-				// 	foreground: 'hsl(var(--secondary-foreground))',
-				// },
+				
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
 					foreground: 'hsl(var(--muted-foreground))',
