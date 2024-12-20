@@ -13,7 +13,7 @@ const NavLink = (props: {
 	}
 		${props.mobile ? ' after:bg-fontDark dark:after:bg-fontLight' : ''} `
 
-	const actionLink = `relative w-fit block after:block after:content-[''] after:absolute after:h-[1px]  after:w-[75%]  after:scale-x-100 after:transition after:duration-300 after:origin-left`
+	const actionLink = `relative w-fit block after:block after:content-[''] after:absolute after:h-[.5px]  after:w-[75%]  after:scale-x-100 after:transition after:duration-300 after:origin-left`
 
 	const pathname = usePathname()
 
@@ -22,7 +22,7 @@ const NavLink = (props: {
 			<Link
 				onClick={props.onClick}
 				href={props.link.href}
-				className={`text-2xl lg:text-base uppercase 
+				className={`text-2xl lg:text-base uppercase  font-light
 					${props.isScrolled ? ' text-fontDark dark:text-fontLight' : ''} 
 					${props.mobile ? ' text-fontDark dark:text-fontLight' : ''} 
 					${linkHover} ${pathname === props.link.href ? actionLink : ''}`}>

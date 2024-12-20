@@ -23,9 +23,9 @@ const ThemeToggler = (props: { className?: string; isScrolled?: boolean }) => {
 			onClick={() => setTheme(theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark')}
 			aria-label='Zmień motyw'>
 			{theme === 'dark' || resolvedTheme === 'dark' ? (
-				<Sun className='dark:text-fontLight' />
+				<Sun strokeWidth={1} className='dark:text-fontLight' />
 			) : (
-				<Moon
+				<Moon strokeWidth={1}
 					className={`text-fontDark  ${props.isScrolled ? 'text-fontDark dark:text-fontLight' : 'lg:text-fontLight'}`}
 				/>
 			)}

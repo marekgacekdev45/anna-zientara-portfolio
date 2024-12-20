@@ -11,7 +11,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='pl' suppressHydrationWarning>
-			<body className={`${font_heading} ${font_text} antialiased`}>
+			<body className={`${font_heading} ${font_text} antialiased font-text font-extralight tracking-wide`}>
 				<Provider>
 
 				{children}

@@ -15,8 +15,8 @@ export default function MobileMenu() {
 	return (
 		<Sheet open={open} onOpenChange={setOpen}>
 			<SheetTrigger asChild>
-				<button>
-					<Menu className='size-8' />
+				<button aria-label='Menu'>
+					<Menu strokeWidth={.5} className='size-8' />
 				</button>
 			</SheetTrigger>
 			<SheetContent side='right' className='w-full sm:max-w-none h-screen flex flex-col justify-around items-center'>
@@ -24,7 +24,7 @@ export default function MobileMenu() {
 					<SheetTitle >
                     <Link
 							href='/'
-							className={` text-3xl sm:text-4xl font-semibold `}>
+							className={` text-3xl sm:text-4xl font-semibold font-heading `}>
 							Anna Zientara
 						</Link>
 					</SheetTitle>
@@ -35,7 +35,7 @@ export default function MobileMenu() {
 							<li key={item.href}>
 								<Link
 									href={item.href}
-									className='block py-2 text-lg font-medium transition-colors hover:text-primary'
+									className='block py-2 text-lg font-light transition-colors hover:text-primary'
 									onClick={() => setOpen(false)}>
 									{item.label}
 								</Link>
@@ -45,11 +45,11 @@ export default function MobileMenu() {
 				</nav>
 
 				<div className='flex gap-6 justify-center items-center'>
-                    <Link href='/'>
-                    <Facebook/>
+                    <Link href='/' aria-label='Facebook'>
+                    <Facebook strokeWidth={1}/>
                     </Link>
-                    <Link href='/'>
-                    <Instagram/>
+                    <Link href='/' aria-label='Instagram'>
+                    <Instagram strokeWidth={1}/>
                     </Link>
                 </div>
 

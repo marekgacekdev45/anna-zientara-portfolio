@@ -53,7 +53,7 @@ const Navbar = () => {
 					<div className='flex'>
 						<Link
 							href='/'
-							className={`mr-12 text-3xl sm:text-4xl font-semibold ${
+							className={`mr-12 text-3xl sm:text-4xl font-semibold font-heading ${
 								isScrolled ? 'text-fontDark dark:text-fontLight' : ''
 							}`}>
 							Anna Zientara
