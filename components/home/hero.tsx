@@ -1,5 +1,5 @@
-// import Image from 'next/image'
-// import HeroImg from '@/public/hero.webp'
+import Image from 'next/image'
+import HeroImg from '@/public/hero.webp'
 import Link from 'next/link'
 import { CircleArrowDown } from 'lucide-react'
 import BaseLink from '../base-link'
@@ -24,20 +24,21 @@ const Hero = () => {
 			<Link href='/#o-mnie' aria-label='Przejdź do sekcji o mnie'>
 				<CircleArrowDown
 					className='absolute bottom-4 sm:bottom-12 left-1/2 -translate-x-1/2 sm:left-[4.6rem] w-12 h-12 animate-pulse z-10'
-					strokeWidth={0.5} aria-label='Przejdź do sekcji o mnie'
+					strokeWidth={0.5}
+					aria-label='Przejdź do sekcji o mnie'
 				/>
 			</Link>
 
-			{/* <Image
+			
+			<Image
 				src={HeroImg}
 				alt='Projekt w wykonaniu Anna Zientara'
-				sizes='(max-width: 640px) 640px, 100vw'
-				quality={75}
+				layout='fill'
+				objectFit='cover'
+				quality={70}
 				priority
-				fill
-				placeholder='blur'
 				className='object-cover absolute inset-0 -z-10'
-			/> */}
+			/>
 
 			<div className='absolute inset-0 bg-black opacity-40'></div>
 		</section>
