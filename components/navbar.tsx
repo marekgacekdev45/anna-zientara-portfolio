@@ -15,10 +15,7 @@ export const navLinks = [
 ]
 
 const Navbar = () => {
-
 	const [isScrolled, setIsScrolled] = useState(false)
-
-	
 
 	useEffect(() => {
 		const checkPosition = () => {
@@ -40,17 +37,19 @@ const Navbar = () => {
 
 	return (
 		<>
-			<nav
-				className={`fixed top-0 left-0 right-0 text-fontLight transition-all z-50 ${
-					isScrolled ? 'bg-primary-600 dark:bg-secondary-400 shadow-2xl shadow-gray-500 dark:shadow-gray-800' : ''
+			<header
+				className={`fixed top-0 left-0 right-0 text-fontLight transition-all z-50 text-gray-300 ${
+					isScrolled
+						? 'bg-white dark:bg-black shadow-md  text-colors'
+						: ''
 				}`}>
 				{/* CONTAINER */}
 				<div
-					className={`max-w-[1800px] mx-auto flex justify-between items-center px-4 py-3 lg:py-5 border-b ${
-						!isScrolled ? 'border-primary-400' : 'border-primary-600 dark:border-secondary-400'
+					className={`max-w-[1800px] mx-auto flex justify-between items-center px-4 py-3 lg:py-5  ${
+						isScrolled ? 'border-none' : ' border-b border-gray-300'
 					}`}>
 					{/* links */}
-					<div className='flex'>
+					<nav className='flex'>
 						<Link
 							href='/'
 							className={`mr-12 text-3xl sm:text-4xl font-semibold font-heading ${
@@ -64,7 +63,7 @@ const Navbar = () => {
 								<NavLink key={index} link={link} isScrolled={isScrolled} />
 							))}
 						</ul>
-					</div>
+					</nav>
 
 					{/* themeToggler & mobileMenu */}
 					<ThemeToggler
@@ -75,7 +74,7 @@ const Navbar = () => {
 						<MobileMenu />
 					</div>
 				</div>
-			</nav>
+			</header>
 		</>
 	)
 }

@@ -1,4 +1,3 @@
-
 import { font_heading, font_text } from '@/app/utils/fonts'
 
 import './globals.css'
@@ -11,12 +10,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='pl' suppressHydrationWarning>
-			<body className={`${font_heading} ${font_text} antialiased font-text font-extralight tracking-wide`}>
-				<Provider>
-
-				{children}
-				</Provider>
-				</body>
+			<body className={`${font_heading} ${font_text}  font-text `}>
+				<Provider>{children}</Provider>
+			</body>
 		</html>
 	)
 }
