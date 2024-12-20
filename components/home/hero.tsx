@@ -7,18 +7,6 @@ import BaseLink from '../base-link'
 const Hero = () => {
 	return (
 		<section className='relative flex justify-center items-center  w-full h-screen  text-fontLight'>
-			<Image
-				src={HeroImg}
-				alt='Projekt w wykonaniu Anna Zientara'
-				className='object-cover absolute inset-0 -z-10'
-				fill
-                sizes="100vw"
-				priority 
-                placeholder="blur"
-                quality={100}
-			/>
-
-			<div className='absolute inset-0 bg-black opacity-40'></div>
 			<div className=' flex flex-col md:flex-row justify-between gap-12 sm:gap-0 sm:h-[70%] 2xl:h-[60%] w-[90%] z-10'>
 				<div className='xl:w-1/3'>
 					<h1 className='text-5xl smtext-8xl lg:text-9xl font-heading'>Architektura pełna harmonii</h1>
@@ -39,6 +27,19 @@ const Hero = () => {
 					strokeWidth={0.5}
 				/>
 			</Link>
+
+			<Image
+				src={HeroImg}
+				alt='Projekt w wykonaniu Anna Zientara'
+				sizes='(max-width: 640px) 640px, 100vw'
+				quality={75}
+				priority
+				fill
+				placeholder='blur'
+				className='object-cover absolute inset-0 -z-10'
+			/>
+
+			<div className='absolute inset-0 bg-black opacity-40'></div>
 		</section>
 	)
 }
