@@ -11,7 +11,6 @@ const Hero = (props: { title: string; image: StaticImageData | string }) => {
 				src={image}
 				alt='Projekt w wykonaniu Anna Zientara'
 				fill
-				objectFit='cover'
 				quality={70}
 				priority
 				className='object-cover absolute inset-0 -z-10'

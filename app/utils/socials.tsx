@@ -8,4 +8,3 @@ export const socials = [
 	},
 	{ label: 'Instagram', href: '#', icon: <Instagram strokeWidth={1.7} className='hover:scale-105 ' /> },
 ]
-
