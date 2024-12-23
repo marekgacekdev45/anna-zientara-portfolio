@@ -1,4 +1,4 @@
-import { generateMetadata } from '@/lib/metadata'
+import { generateMetadata } from '@/lib/generateMetadata'
 
 import Hero from '@/components/hero'
 import TimelineItem from '@/components/timeline-item'
@@ -51,23 +51,13 @@ const documentationList = [
 	},
 ]
 
-export const metadata: Metadata = {
-	metadataBase: new URL('https:anna-zientara-portfolio.netlify.app/'), // Dodaj metadataBase
-	title: 'Proces projektowy',
-	description: 'inne',
-	alternates: {
-		canonical: '/proces-projektowy',
-	},
+export const metadata: Metadata = generateMetadata({
+	title:'Proces projektowy',
+	description:'Proces projektowy desc',
+	path:'/proces-projektowy',
+})
 
-	openGraph: {
-		title: 'Proces Projektowy | Anna Zientara - Architekt Wnętrz',
-		description: 'inne',
-		type: 'website',
-		locale: 'pl_PL',
-		url: '',
-		siteName: 'Anna Zientara - Architekt Wnętrz',
-	},
-}
+
 
 export default function Process() {
 	return (

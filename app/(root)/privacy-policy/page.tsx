@@ -2,8 +2,13 @@ import Hero from '@/components/hero'
 import type { Metadata } from 'next'
 
 import HeroImage from '@/public/hero.webp'
+import { generateMetadata } from '@/lib/generateMetadata'
 
-
+export const metadata: Metadata = generateMetadata({
+	title:'Polityka prywatności',
+	description:'Polityka prywatności',
+	path:'/polityka-prywatnosci',
+})
 
 export default function PrivacyPolicy() {
 	return (
