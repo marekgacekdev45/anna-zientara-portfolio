@@ -10,7 +10,7 @@ export const generateMetadata = ({
   url?: string
 } = {}): Metadata => {
   return {
-    metadataBase: new URL('https://anna-zientara-portfolio.netlify.app/'), // Dodaj metadataBase
+    metadataBase: new URL('https://anna-zientara-portfolio.netlify.app/'), 
     title: {
       default: title,
       template: `%s | Anna Zientara - Architekt Wnętrz`,

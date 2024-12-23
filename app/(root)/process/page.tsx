@@ -5,6 +5,7 @@ import TimelineItem from '@/components/timeline-item'
 import Timeline from '@/components/timeline'
 
 import HeroImage from '@/public/proces-hero.webp'
+import { Metadata } from 'next'
 
 const conceptionList = [
 	{
@@ -41,7 +42,7 @@ const projectList = [
 ]
 
 const documentationList = [
-	{ title: 'Szczegółowy układ funkcjonalnt', text: 'Wytyczne wykonawcze na zatwierdzony układ funkcjonalny.' },
+	{ title: 'Szczegółowy układ funkcjonalny', text: 'Wytyczne wykonawcze na zatwierdzony układ funkcjonalny.' },
 	{ title: 'Dokumentacja przyłączy', text: 'Wytyczne wykonawcze przyłączy elektrycznych.' },
 	{ title: 'Kłady ścian', text: 'Wytyczne wykonawcze.' },
 	{
@@ -50,7 +51,23 @@ const documentationList = [
 	},
 ]
 
+export const metadata: Metadata = {
+	metadataBase: new URL('https:anna-zientara-portfolio.netlify.app/'), // Dodaj metadataBase
+	title: 'Proces projektowy',
+	description: 'inne',
+	alternates: {
+		canonical: '/proces-projektowy',
+	},
 
+	openGraph: {
+		title: 'Proces Projektowy | Anna Zientara - Architekt Wnętrz',
+		description: 'inne',
+		type: 'website',
+		locale: 'pl_PL',
+		url: '',
+		siteName: 'Anna Zientara - Architekt Wnętrz',
+	},
+}
 
 export default function Process() {
 	return (
