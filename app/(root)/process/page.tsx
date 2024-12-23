@@ -50,12 +50,7 @@ const documentationList = [
 	},
 ]
 
-export const metadata = generateMetadata({
-	title: 'Proces projektowy',
-	description:
-		'Poznaj mój proces projektowy – od koncepcji po nadzór autorski. Oferuję kompleksowe usługi, które łączą estetykę z funkcjonalnością, aby stworzyć wnętrza dopasowane do Twoich potrzeb.',
-	url: 'https://https://anna-zientara-portfolio.netlify.app/proces-projektowy',
-})
+
 
 export default function Process() {
 	return (

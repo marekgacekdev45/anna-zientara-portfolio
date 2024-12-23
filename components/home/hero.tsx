@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { CircleArrowDown } from 'lucide-react'
 import BaseLink from '../base-link'
 
-const Hero = () => {
+const HomeHero = () => {
 	return (
 		<section className='relative flex justify-center items-center  w-full h-screen text-primary--light '>
 			<div className=' flex flex-col md:flex-row justify-between gap-12 sm:gap-0 sm:h-[70%] 2xl:h-[60%] w-[90%] z-10'>
@@ -45,4 +45,4 @@ const Hero = () => {
 	)
 }
 
-export default Hero
+export default HomeHero
