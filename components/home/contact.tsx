@@ -1,12 +1,12 @@
 
 import Link from 'next/link'
-// import Image from 'next/image'
+import Image from 'next/image'
 
 
 import BaseLink from '@/components/base-link'
 import { socials } from '@/app/utils/socials'
 
-// import DummyImage from '@/public/assets/kontakt.webp'
+import ContactImage from '@/public/kontakt.webp'
 
 
 
@@ -66,12 +66,17 @@ const Contact = () => {
 				</div>
 
 				<div className='flex justify-start items-center'>
-					{/* <Image
-						src={DummyImage}
-						alt='hero'
-						className='aspect-square max-h-[550px] shadow-2xl shadow-gray-700'
-						loading='lazy'
-					/> */}
+				<Image
+						src={ContactImage}
+						alt='wizualizacja wystroju wnętrza wykonana przez Anna Zientara'
+						
+						placeholder='blur'
+						className=' aspect-square w-full object-cover'
+						
+						width={600}
+						height={600}
+						quality={90}
+					/>
 				</div>
 			</div>
 		</section>
