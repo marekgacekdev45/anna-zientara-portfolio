@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import img from '@/public/work.webp';
 import { Project } from '@/sanity/lib/interface'
 import { urlFor } from '@/sanity/lib/image';
 
