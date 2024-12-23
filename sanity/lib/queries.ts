@@ -18,4 +18,11 @@ export const GET_ALL_PROJECTS = defineQuery(
     thumbnail
     }
 `
+
 )
+export const GET_PROJECT_BY_SLUG = defineQuery(
+    `*[_type == "project" && slug.current == $slug][0] {
+       ... 
+    }`
+ )
+ 

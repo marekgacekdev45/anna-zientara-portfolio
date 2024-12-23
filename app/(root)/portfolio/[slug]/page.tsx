@@ -1,14 +1,24 @@
 import HeroImage from '@/public/portfolio-hero.webp'
+import { sanityFetch } from '@/sanity/lib/live'
+import { GET_PROJECT_BY_SLUG } from '@/sanity/lib/queries'
 import Image from 'next/image'
 
-const Page = () => {
+
+const Page = async ({ params }: { params: { slug: string } }) => {
+	const { data: project } = await sanityFetch({
+		query: GET_PROJECT_BY_SLUG,
+		params: { slug: params?.slug },
+	})
+
+	const { title, shortDescription, slug, thumbnail } = project
+
 	return (
 		<>
 			<section className={`w-full h-[50vh] flex justify-center items-center text-center relative`}>
 				<div className='z-10'>
-					<h1 className='text-5xl xs:text-7xl sm:text-8xl font-light z-10 text-gray-300'>test</h1>
+					<h1 className='text-5xl xs:text-7xl sm:text-8xl font-light z-10 text-gray-300'>{title}</h1>
 					<p className='italic text-lg font-light text-gray-300'>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis libero hic odio.
+						{shortDescription}
 					</p>
 				</div>
 				<Image
@@ -43,14 +53,12 @@ const Page = () => {
 				<div className='wrapper text-center'>
 					<div className='space-y-3'>
 						<h2 className='font-heading text-3xl xs:text-5xl ml-6 uppercase'>Wizualizacje</h2>
-						<p className='italic font-light '>
-                        wizualizacje koncepcyjne dla projektu wnętrz strefy apartamentowej
-						</p>
+						<p className='italic font-light '>wizualizacje koncepcyjne dla projektu wnętrz strefy apartamentowej</p>
 					</div>
 				</div>
-                <div className='wrapper grid md:grid-cols-2 xl:grid-cols-3 gap-y-12 !max-w-screen-max'>
-						{/* <Gallery gallery={project.imagesGallery} title={project.title} /> */}
-					</div>
+				<div className='wrapper grid md:grid-cols-2 xl:grid-cols-3 gap-y-12 !max-w-screen-max'>
+					{/* <Gallery gallery={project.imagesGallery} title={project.title} /> */}
+				</div>
 			</section>
 		</>
 	)
