@@ -64,7 +64,7 @@ export default function Process() {
 		<>
 			<Hero image={HeroImage} title='Proces projektowy' />
 
-			<main>
+			
 				<section className='section py-12 sm:py-24'>
 					<div className='wrapper flex flex-col  gap-16 justify-center items-start !max-w-screen-md'>
 						<div className='space-y-12'>
@@ -95,7 +95,7 @@ export default function Process() {
 						</div>
 					</div>
 				</section>
-			</main>
+			
 		</>
 	)
 }
