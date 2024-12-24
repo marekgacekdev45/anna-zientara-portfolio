@@ -1,11 +1,25 @@
 import Image, { StaticImageData } from 'next/image'
 
-const Hero = (props: { title: string; image: StaticImageData | string }) => {
-	const { title, image } = props
-
+const Hero = ({
+	title,
+	image,
+	description,
+}: {
+	title: string
+	image: StaticImageData | string
+	description?: string
+}) => {
 	return (
 		<section className={`w-full h-[50vh] flex justify-center items-center text-center relative`}>
-			<h1 className='text-5xl xs:text-7xl sm:text-8xl font-light z-10 text-gray-300'>{title}</h1>
+			
+			{description ? (
+				<div className='z-10 space-y-4'>
+					<h1 className='text-5xl xs:text-7xl sm:text-8xl font-light z-10 text-gray-300'>{title}</h1>
+					<p className='italic text-lg font-light text-gray-300'>{description}</p>
+				</div>
+			) : (
+				<h1 className='text-5xl xs:text-7xl sm:text-8xl font-light z-10 text-gray-300'>{title}</h1>
+			)}
 
 			<Image
 				src={image}

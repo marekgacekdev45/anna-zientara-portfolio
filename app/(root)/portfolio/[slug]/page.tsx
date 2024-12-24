@@ -1,8 +1,9 @@
-import HeroImage from '@/public/portfolio-hero.webp'
+import { urlFor } from '@/sanity/lib/image'
 import { sanityFetch } from '@/sanity/lib/live'
 import { GET_PROJECT_BY_SLUG } from '@/sanity/lib/queries'
-import Image from 'next/image'
 
+import Hero from '@/components/hero'
+import Gallery from '@/components/gallery'
 
 const Page = async ({ params }: { params: { slug: string } }) => {
 	const { data: project } = await sanityFetch({
@@ -10,41 +11,17 @@ const Page = async ({ params }: { params: { slug: string } }) => {
 		params: { slug: params?.slug },
 	})
 
-	const { title, shortDescription, slug, thumbnail } = project
+	const { title, shortDescription, images, thumbnail, description } = project
 
+	const imageUrls = images.map((image: any) => urlFor(image).url())
 	return (
 		<>
-			<section className={`w-full h-[50vh] flex justify-center items-center text-center relative`}>
-				<div className='z-10'>
-					<h1 className='text-5xl xs:text-7xl sm:text-8xl font-light z-10 text-gray-300'>{title}</h1>
-					<p className='italic text-lg font-light text-gray-300'>
-						{shortDescription}
-					</p>
-				</div>
-				<Image
-					src={HeroImage}
-					alt='Projekt w wykonaniu Anna Zientara'
-					fill
-					quality={70}
-					priority
-					className='object-cover absolute inset-0 -z-10'
-				/>
-				<div className='absolute inset-0 bg-black opacity-50'></div>
-			</section>
+			<Hero image={urlFor(thumbnail).url()} title={title} description={shortDescription} />
 
-			<section className='section py-6 sm:py-12'>
+			<section className='section py-6 sm:pb-6 sm:pt-16'>
 				<div className='wrapper !max-w-screen-xl'>
 					<div className='prose max-w-full text-gray-900 dark:text-gray-300 '>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut sint vitae laborum aliquam, quaerat quibusdam
-							corrupti animi ullam voluptatibus consectetur numquam repellendus necessitatibus libero? Unde illum id
-							reprehenderit autem ducimus vitae deserunt eveniet ipsa aliquam similique omnis repellendus tenetur porro,
-							ratione aperiam exercitationem, a voluptatem, cupiditate molestias blanditiis sint quasi quos. Fugiat
-							ipsum reiciendis ea? Vero consequatur nihil placeat suscipit, in minima ipsam obcaecati at laudantium id.
-							Quam voluptatum, dolore ad officiis perferendis autem aut quae porro, odio hic ex molestiae obcaecati,
-							fugit quisquam. Animi inventore quasi itaque esse voluptates vitae accusamus, commodi eligendi nostrum,
-							quas libero? Ducimus, itaque officiis!
-						</p>
+						<p className='text-center'>{description}</p>
 					</div>
 				</div>
 			</section>
@@ -56,8 +33,8 @@ const Page = async ({ params }: { params: { slug: string } }) => {
 						<p className='italic font-light '>wizualizacje koncepcyjne dla projektu wnętrz strefy apartamentowej</p>
 					</div>
 				</div>
-				<div className='wrapper grid md:grid-cols-2 xl:grid-cols-3 gap-y-12 !max-w-screen-max'>
-					{/* <Gallery gallery={project.imagesGallery} title={project.title} /> */}
+				<div className='wrapper grid md:grid-cols-2 xl:grid-cols-3 gap-10 !max-w-screen-max mx-auto pt-12'>
+					<Gallery images={imageUrls} alt={title} />
 				</div>
 			</section>
 		</>
