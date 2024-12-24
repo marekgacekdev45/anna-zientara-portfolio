@@ -18,13 +18,11 @@ const Gallery = ({ images, alt }: { images: string[]; alt: string }) => {
 	const [open, setOpen] = useState(false)
 	const [index, setIndex] = useState(0)
 
-	const fullscreenRef = useRef(null)
 	return (
 		<>
 			{images.map((img, i) => (
-				<div className='overflow-hidden'>
+				<div className='overflow-hidden' key={i}>
 					<Image
-						key={i}
 						src={img}
 						alt={`Projekt ${alt} w wykonaniu Anna Zientara`}
 						width={500}
