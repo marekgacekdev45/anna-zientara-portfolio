@@ -22,7 +22,11 @@ export const GET_ALL_PROJECTS = defineQuery(
 )
 export const GET_PROJECT_BY_SLUG = defineQuery(
     `*[_type == "project" && slug.current == $slug][0] {
-       ... 
+       title,
+       shortDescription,
+       images,
+       thumbnail,
+       description
     }`
  )
  

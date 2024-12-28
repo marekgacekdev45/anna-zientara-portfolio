@@ -15,7 +15,7 @@ const contactList = [
     {
         title: 'Telefon',
         content: '+48 555 444 444',
-        link:"tel:+48 555 444 444"
+        link:"tel:+48555444444"
     },
     {
         title: 'Email',
@@ -25,7 +25,7 @@ const contactList = [
     {
         title: 'Adres',
         content: 'testowa 123, 34-400 Test',
-        link:""
+        link:"#"
         
     },
 ]
