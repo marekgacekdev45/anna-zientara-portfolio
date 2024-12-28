@@ -7,7 +7,9 @@ import Hero from '@/components/hero'
 import ProjectCard from '@/components/project-card'
 import { Project } from '@/sanity/lib/interface'
 import { GET_ALL_PROJECTS } from '@/sanity/lib/queries'
-import { sanityFetch } from '@/sanity/lib/live'
+import { client } from '@/sanity/lib/client'
+
+export const revalidate = 60
 
 export const metadata: Metadata = generateMetadata({
 	title: 'Portfolio',
@@ -16,9 +18,7 @@ export const metadata: Metadata = generateMetadata({
 })
 
 const Page = async () => {
-	const { data: projects } = await sanityFetch({
-		query: GET_ALL_PROJECTS,
-	})
+	const projects: Project[] = await GET_ALL_PROJECTS()
 	return (
 		<>
 			<Hero image={HeroImage} title='Portfolio' />
