@@ -4,11 +4,54 @@ import { GET_PROJECT_BY_SLUG } from '@/sanity/lib/queries'
 
 import Hero from '@/components/hero'
 import Gallery from '@/components/gallery'
+import { Metadata } from 'next'
 
-const Page = async ({ params }: { params: { slug: string } }) => {
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata | undefined> {
+	const { slug } = await params
+
+	if (!slug) {
+		return
+	}
+
+	// Await params.slug if necessary
 	const { data: project } = await sanityFetch({
 		query: GET_PROJECT_BY_SLUG,
-		params: { slug: params?.slug },
+		params: { slug: slug },
+	})
+
+	if (!project) {
+		return
+	}
+
+	return {
+		title: `${project.title} | Anna Zientara - Architekt Wnętrz`,
+		description:
+			`${project.shortDescription}` || `Projekt ${project.title} w wykonaniu Anna Zientara - Architekt Wnętrz`,
+		openGraph: {
+			title: `${project.title} | Anna Zientara - Architekt Wnętrz`,
+			description:
+				`${project.shortDescription}` || `Projekt ${project.title} w wykonaniu Anna Zientara - Architekt Wnętrz`,
+			type: 'article',
+			locale: 'pl_PL',
+			url: `https://annazientara.pl/${project.slug.current}`,
+			siteName: 'Anna Zientara - Architekt Wnętrz',
+			images: [
+				{
+					url: urlFor(project.thumbnail).url(),
+					width: 1200,
+					height: 630,
+					alt: `miniaturka projektu ${project.title} w wykonaniu Anna Zientara - Architekt Wnętrz`,
+				},
+			],
+		},
+	}
+}
+
+const Page = async ({ params }: { params: { slug: string } }) => {
+	const { slug } = await params
+	const { data: project } = await sanityFetch({
+		query: GET_PROJECT_BY_SLUG,
+		params: { slug: slug },
 	})
 
 	const { title, shortDescription, images, thumbnail, description } = project
