@@ -1,11 +1,11 @@
 import { generateMetadata } from '@/lib/generateMetadata'
+import { Metadata } from 'next'
 
 import Hero from '@/components/hero'
 import TimelineItem from '@/components/timeline-item'
 import Timeline from '@/components/timeline'
 
 import HeroImage from '@/public/proces-hero.webp'
-import { Metadata } from 'next'
 
 const conceptionList = [
 	{
@@ -53,7 +53,7 @@ const documentationList = [
 
 export const metadata: Metadata = generateMetadata({
 	title:'Proces projektowy',
-	description:'Proces projektowy desc',
+	description:'Odkryj proces projektowy Anny Zientary – profesjonalne podejście do tworzenia przestrzeni, łączące estetykę z funkcjonalnością.',
 	path:'/proces-projektowy',
 })
 

@@ -1,12 +1,13 @@
-import Hero from '@/components/hero'
+import { generateMetadata } from '@/lib/generateMetadata'
 import type { Metadata } from 'next'
 
+import Hero from '@/components/hero'
+
 import HeroImage from '@/public/hero.webp'
-import { generateMetadata } from '@/lib/generateMetadata'
 
 export const metadata: Metadata = generateMetadata({
 	title:'Polityka prywatności',
-	description:'Polityka prywatności',
+	description:'Zapoznaj się z polityką prywatności strony Anny Zientary, gdzie szczegółowo opisano sposób zbierania i przetwarzania danych osobowych użytkowników.',
 	path:'/polityka-prywatnosci',
 })
 

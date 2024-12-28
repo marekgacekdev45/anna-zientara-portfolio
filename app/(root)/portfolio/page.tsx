@@ -1,19 +1,19 @@
 import { generateMetadata } from '@/lib/generateMetadata'
 import { Metadata } from 'next'
 
-import HeroImage from '@/public/portfolio-hero.webp'
+import { Project } from '@/sanity/lib/interface'
+import { GET_ALL_PROJECTS } from '@/sanity/lib/queries'
 
 import Hero from '@/components/hero'
 import ProjectCard from '@/components/project-card'
-import { Project } from '@/sanity/lib/interface'
-import { GET_ALL_PROJECTS } from '@/sanity/lib/queries'
-import { client } from '@/sanity/lib/client'
+
+import HeroImage from '@/public/portfolio-hero.webp'
 
 export const revalidate = 60
 
 export const metadata: Metadata = generateMetadata({
 	title: 'Portfolio',
-	description: 'Portfolio desc',
+	description: 'Przeglądaj portfolio Anny Zientary – zbiór projektów, które łączą kreatywność, funkcjonalność i estetykę w przestrzeniach pełnych charakteru.',
 	path: '/portfolio',
 })
 

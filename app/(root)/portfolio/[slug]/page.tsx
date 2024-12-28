@@ -1,28 +1,17 @@
+import { Metadata } from 'next'
 import { urlFor } from '@/sanity/lib/image'
-import { sanityFetch } from '@/sanity/lib/live'
+import { Project } from '@/sanity/lib/interface'
 import { GET_PROJECT_BY_SLUG } from '@/sanity/lib/queries'
 
 import Hero from '@/components/hero'
 import Gallery from '@/components/gallery'
-import { Metadata } from 'next'
 
 export const revalidate = 60
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata | undefined> {
 	const { slug } = await params
 
-	if (!slug) {
-		return
-	}
-
-	const { data: project } = await sanityFetch({
-		query: GET_PROJECT_BY_SLUG,
-		params: { slug: slug },
-	})
-
-	if (!project) {
-		return
-	}
+	const project: Project = await GET_PROJECT_BY_SLUG(slug)
 
 	return {
 		title: `${project.title} | Anna Zientara - Architekt Wnętrz`,
@@ -50,10 +39,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 const Page = async ({ params }: { params: { slug: string } }) => {
 	const { slug } = await params
-	const { data: project } = await sanityFetch({
-		query: GET_PROJECT_BY_SLUG,
-		params: { slug: slug },
-	})
+
+	const project: Project = await GET_PROJECT_BY_SLUG(slug)
 
 	const { title, shortDescription, images, thumbnail, description } = project
 

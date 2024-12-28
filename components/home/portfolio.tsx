@@ -8,7 +8,7 @@ import { Project } from '@/sanity/lib/interface'
 export const revalidate = 60
 
 const Portfolio = async () => {
-	const projects: Project[] = await GET_PROJECTS_WITH_LIMIT(4)
+	const projects: Project[] = await GET_PROJECTS_WITH_LIMIT('4')
 
 	return (
 		<section className='section pt-12 pb-12'>
