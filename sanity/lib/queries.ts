@@ -1,7 +1,7 @@
 import { client } from './client'
 
-export const GET_PROJECTS_WITH_LIMIT = async (limit: string) => {
-	const query = `*[_type == "project"] | order(_createdAt desc) [0...${limit}] {
+export const GET_PROJECTS_WITH_LIMIT = async () => {
+	const query = `*[_type == "project"] | order(_createdAt desc) [0...4] {
     title, 
     shortDescription, 
     slug,
