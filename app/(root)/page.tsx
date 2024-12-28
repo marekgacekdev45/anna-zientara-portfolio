@@ -4,6 +4,8 @@ import Process from '@/components/home/process'
 import Portfolio from '@/components/home/portfolio'
 import Contact from '@/components/home/contact'
 
+export const revalidate = 60
+
 const Home = () => {
 	return (
 		<>
