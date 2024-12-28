@@ -68,7 +68,7 @@ export default function Process() {
 				<section className='section py-12 sm:py-24'>
 					<div className='wrapper flex flex-col  gap-16 justify-center items-start !max-w-screen-md'>
 						<div className='space-y-12'>
-							<h2 className='font-heading text-3xl xs:text-5xl ml-6 uppercase '>Koncepcja</h2>
+							<h2 className='font-heading text-3xl sm:text-5xl ml-6 uppercase '>Koncepcja</h2>
 							<Timeline>
 								{conceptionList.map((item, index) => (
 									<TimelineItem key={index} title={item.title} text={item.text} />
@@ -77,7 +77,7 @@ export default function Process() {
 						</div>
 
 						<div className='space-y-12'>
-							<h2 className='font-heading text-3xl xs:text-5xl ml-6 uppercase '>Projekty</h2>
+							<h2 className='font-heading text-3xl sm:text-5xl ml-6 uppercase '>Projekty</h2>
 							<Timeline>
 								{projectList.map((item, index) => (
 									<TimelineItem key={index} title={item.title} text={item.text} />
@@ -86,7 +86,7 @@ export default function Process() {
 						</div>
 
 						<div className='space-y-12'>
-							<h2 className='font-heading text-3xl xs:text-5xl ml-6 uppercase '>Dokumentacja</h2>
+							<h2 className='font-heading text-3xl sm:text-5xl ml-6 uppercase '>Dokumentacja</h2>
 							<Timeline>
 								{documentationList.map((item, index) => (
 									<TimelineItem key={index} title={item.title} text={item.text} />
