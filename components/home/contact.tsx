@@ -44,7 +44,7 @@ const Contact = () => {
                     {contactList.map((item) => (
                         <div key={item.title} className='flex flex-col gap-2'>
                             <h3 className='text-3xl'>{item.title}</h3>
-                            <BaseLink noArrow href={item.link} className='lowercase leading-relaxed  text-lg after:bg-white dark:after-bg-black'>
+                            <BaseLink noArrow href={item.link} className='lowercase leading-relaxed  text-lg after:bg-black dark:after:bg-white'>
                                 {item.content}
                             </BaseLink>
                         </div>

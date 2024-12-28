@@ -10,7 +10,6 @@ import BaseLink from '@/components/base-link'
 import FooterCurrentYear from '@/components/footer-current-year'
 
 const Footer = () => {
-	// const currentYear = new Date().getFullYear()
 
 	return (
 		<footer className='bg-white dark:bg-black'>
@@ -31,12 +30,12 @@ const Footer = () => {
 							<h2 className='text-xl font-heading  uppercase '>Kontakt</h2>
 							<ul className='space-y-3'>
 								<li>
-									<BaseLink href='#' noArrow small className='after:bg-white dark:after-bg-black'>
+									<BaseLink href='tel:+48555444444' noArrow small className='after:bg-black dark:after:bg-white'>
 										+48 123 456 789
 									</BaseLink>
 								</li>
 								<li>
-									<BaseLink href='#' noArrow small className='after:bg-white dark:after-bg-black'>
+									<BaseLink href='mailto:test@gmail.com' noArrow small className='after:bg-black dark:after:bg-white'>
 										test@gmail.com
 									</BaseLink>
 								</li>
@@ -63,7 +62,7 @@ const Footer = () => {
 				<hr className='border-secondary-400 dark:border-primary-400 w-full ' />
 				{/* BOTTOM */}
 				<div className='flex flex-col sm:flex-row w-full justify-center items-center sm:justify-between gap-6'>
-					<BaseLink href='/polityka-prywatnosci' noArrow small className='after:bg-white dark:after-bg-black'>
+					<BaseLink href='/polityka-prywatnosci' noArrow small className='after:bg-black dark:after:bg-white'>
 						Polityka Prywatności
 					</BaseLink>
 

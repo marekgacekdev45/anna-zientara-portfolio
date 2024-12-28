@@ -13,7 +13,6 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 		return
 	}
 
-	// Await params.slug if necessary
 	const { data: project } = await sanityFetch({
 		query: GET_PROJECT_BY_SLUG,
 		params: { slug: slug },
@@ -72,8 +71,8 @@ const Page = async ({ params }: { params: { slug: string } }) => {
 			<section className='section pb-12 sm:pt-12 sm:pb-24'>
 				<div className='wrapper text-center'>
 					<div className='space-y-3'>
-						<h2 className='font-heading text-3xl xs:text-5xl ml-6 uppercase'>Wizualizacje</h2>
-						<p className='italic font-light '>wizualizacje koncepcyjne dla projektu wnętrz strefy apartamentowej</p>
+						<h2 className='font-heading text-3xl xs:text-5xl ml-6 uppercase'>Galeria</h2>
+						<p className='italic font-light '>wizualizacje koncepcyjne dla projektu </p>
 					</div>
 				</div>
 				<div className='wrapper grid md:grid-cols-2 xl:grid-cols-3 gap-10 !max-w-screen-max mx-auto pt-12'>
