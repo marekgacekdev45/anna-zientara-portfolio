@@ -6,6 +6,8 @@ import Hero from '@/components/hero'
 import Gallery from '@/components/gallery'
 import { Metadata } from 'next'
 
+export const revalidate = 60
+
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata | undefined> {
 	const { slug } = await params
 

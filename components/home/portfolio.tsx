@@ -5,7 +5,7 @@ import { GET_PROJECTS_WITH_LIMIT } from '@/sanity/lib/queries'
 
 import { Project } from '@/sanity/lib/interface'
 
-
+export const revalidate = 60
 
 const Portfolio = async () => {
 	const { data: projects } = await sanityFetch({
