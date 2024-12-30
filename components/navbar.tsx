@@ -74,7 +74,7 @@ const Navbar = () => {
 										className='hidden dark:block'
 									/>
 									<img
-										src='/logo--dark.png'
+										src='/logo--dark.webp'
 										alt='logo Ebene Studio by Anna Zientara'
 										width={120}
 										height={50}
