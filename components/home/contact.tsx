@@ -14,20 +14,20 @@ import ContactImage from '@/public/kontakt.webp'
 const contactList = [
     {
         title: 'Telefon',
-        content: '+48 555 444 444',
-        link:"tel:+48555444444"
+        content: '+48 500 499 600',
+        link:"tel:+48500499600"
     },
     {
         title: 'Email',
-        content: 'test@gmail.com',
-        link:"mailto:test@gmail.com"
+        content: 'anna@ebene.com.pl',
+        link:"mailto:anna@ebene.com.pl"
     },
-    {
-        title: 'Adres',
-        content: 'testowa 123, 34-400 Test',
-        link:"#"
+    // {
+    //     title: 'Adres',
+    //     content: 'testowa 123, 34-400 Test',
+    //     link:"#"
         
-    },
+    // },
 ]
 
 const Contact = () => {
