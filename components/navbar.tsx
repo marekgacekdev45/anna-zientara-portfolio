@@ -3,13 +3,10 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
-// import logoLight from '@/public/logo--light.png'
-// import logoDark from '@/public/logo--dark.png'
 
 import NavLink from '@/components/nav-link'
 import ThemeToggler from '@/components/theme-toggler'
 import MobileMenu from './mobile-menu'
-// import Image from 'next/image'
 
 export const navLinks = [
 	{ href: '/#o-mnie', label: 'O mnie' },
@@ -59,7 +56,7 @@ const Navbar = () => {
 							}`}>
 							{!isScrolled && (
 								<img
-									src='/logo--light.png'
+									src='/logo--light.webp'
 									alt='logo Ebene Studio by Anna Zientara'
 									width={120}
 									height={30}
@@ -69,7 +66,7 @@ const Navbar = () => {
 							{isScrolled && (
 								<>
 									<img
-										src='/logo--light.png'
+										src='/logo--light.webp'
 										alt='logo Ebene Studio by Anna Zientara'
 										width={120}
 										height={50}

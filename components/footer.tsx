@@ -6,9 +6,6 @@ import { socials } from '@/app/utils/socials'
 import mmLight from '@/public/icons/mm--light.svg'
 import mmDark from '@/public/icons/mm--dark.svg'
 
-import logoLight from '@/public/logo--light.png'
-import logoDark from '@/public/logo--dark.png'
-
 import BaseLink from '@/components/base-link'
 
 import FooterCurrentYear from '@/components/footer-current-year'
@@ -23,8 +20,8 @@ const Footer = () => {
 					{/* logo */}
 					<div className=' flex flex-col text-center  md:text-left items-center  md:items-start gap-2 w-full  md:max-w-[300px]  '>
 						<Link href='/' className='text-3xl sm:text-4xl font-semibold'>
-							<Image src={logoLight} alt='logo Ebene Studio by Anna Zientara' width={175}height={72} className='hidden dark:block' />
-							<Image src={logoDark} alt='logo Ebene Studio by Anna Zientara' width={175} height={72} className='block dark:hidden' />
+							<img src='/logo--light.webp' alt='logo Ebene Studio by Anna Zientara' width={175}height={72} className='hidden dark:block' />
+							<img src='/logo--dark.webp' alt='logo Ebene Studio by Anna Zientara' width={175} height={72} className='block dark:hidden' />
 						</Link>
 						<p className='text'>Architektura wnętrz z pasją i zaangażowaniem</p>
 					</div>
