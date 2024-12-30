@@ -1,4 +1,5 @@
-import { client } from './client'
+// import { client, sanityFetch } from './client'
+import { sanityFetch } from './client'
 
 export const GET_PROJECTS_WITH_LIMIT = async () => {
 	const query = `*[_type == "project"] | order(_createdAt desc) [0...4] {
@@ -7,7 +8,12 @@ export const GET_PROJECTS_WITH_LIMIT = async () => {
     slug,
     thumbnail
     }`
-	const data = await client.fetch(query)
+	// const data = await client.fetch(query)
+	const data = await sanityFetch({
+		query: query,
+		revalidate: 60,
+	})
+
 	return data
 }
 
@@ -19,7 +25,11 @@ export const GET_ALL_PROJECTS = async () => {
     thumbnail
     }`
 
-	const data = await client.fetch(query)
+	// const data = await client.fetch(query)
+    const data = await sanityFetch({
+		query: query,
+		revalidate: 60,
+	})
 	return data
 }
 
@@ -33,6 +43,10 @@ export const GET_PROJECT_BY_SLUG = async (slug: string) => {
     thumbnail,
     description
     }`
-	const data = await client.fetch(query)
+	// const data = await client.fetch(query)
+    const data = await sanityFetch({
+		query: query,
+		revalidate: 60,
+	})
 	return data
 }
