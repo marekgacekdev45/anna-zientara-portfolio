@@ -3,13 +3,13 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
-import logoLight from '@/public/logo--light.png'
-import logoDark from '@/public/logo--dark.png'
+// import logoLight from '@/public/logo--light.png'
+// import logoDark from '@/public/logo--dark.png'
 
 import NavLink from '@/components/nav-link'
 import ThemeToggler from '@/components/theme-toggler'
 import MobileMenu from './mobile-menu'
-import Image from 'next/image'
+// import Image from 'next/image'
 
 export const navLinks = [
 	{ href: '/#o-mnie', label: 'O mnie' },
@@ -58,33 +58,30 @@ const Navbar = () => {
 								isScrolled ? 'text-fontDark dark:text-fontLight' : ''
 							}`}>
 							{!isScrolled && (
-								<Image
-									src={logoLight}
+								<img
+									src='/logo--light.png'
 									alt='logo Ebene Studio by Anna Zientara'
 									width={120}
 									height={30}
-									quality={100}
-									priority
+									
 								/>
 							)}
 							{isScrolled && (
 								<>
-									<Image
-										src={logoLight}
+									<img
+										src='/logo--light.png'
 										alt='logo Ebene Studio by Anna Zientara'
 										width={120}
 										height={50}
-										quality={100}
-										priority
+										
 										className='hidden dark:block'
 									/>
-									<Image
-										src={logoDark}
+									<img
+										src='/logo--dark.png'
 										alt='logo Ebene Studio by Anna Zientara'
 										width={120}
 										height={50}
-										quality={100}
-										priority
+										
 										className='block dark:hidden'
 									/>
 								</>
