@@ -12,7 +12,7 @@ const HomeHero = () => {
 					<h1 className='text-5xl sm:text-8xl lg:text-9xl font-heading '>Architektura pełna harmonii</h1>
 				</div>
 				<div className='flex flex-col gap-6 justify-end items-end pl-20 sm:pl-0  xl:w-1/3 2xl:w-1/4  text-end'>
-					<p className='text-xl sm:text-2xl font-light'>
+					<p className='text-xl sm:text-2xl font-extralight'>
 						Przekonaj się, jak tworzone przeze mnie wnętrza łączą styl życia z nowoczesnym designem.
 					</p>
 					<BaseLink href='/portfolio' className='after:bg-white '>

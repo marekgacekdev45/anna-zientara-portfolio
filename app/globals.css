@@ -97,6 +97,6 @@
 	}
 
 	.text {
-		@apply leading-relaxed   text-lg  tracking-wide;
+		@apply leading-relaxed   text-lg  tracking-wide font-extralight ;
 	}
 }
